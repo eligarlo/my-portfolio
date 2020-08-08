@@ -1,0 +1,95 @@
+main {
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+
+    &.home {
+        overflow: hidden;
+        .hero {
+            margin-top: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 200px;
+                height: 200px;
+                margin-right: 30px;
+            }
+        
+            .header-text {
+                display: flex;
+                flex-direction: column;
+
+                .lg-heading {
+                    line-height: 1;
+                }
+
+                .social-icons {
+                    margin-top: 1rem;
+            
+                    a {
+                        padding: 0.4rem;
+                        color: #fff;
+                        text-decoration: none;
+                        @include easeOut;
+            
+                        &:hover {
+                            svg {
+                                @include easeInOut;
+                                color: $secondary-color;
+                                transform: scale(1.2);
+                                transform: translateY(-5px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+        &.home {
+            .hero {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10vh;
+                
+                img {
+                    width: 180px;
+                    height: 180px;
+                    margin-right: 0;
+                }
+
+                .lg-heading {
+                    margin-top: 5vh;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// Smartphones
+@include mediaSm {
+    main {
+        padding: 2rem;
+        &.home {
+            .hero {
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                .lg-heading {
+                    font-size: 3rem;
+                }
+            }
+        }
+        
+    }
+}
