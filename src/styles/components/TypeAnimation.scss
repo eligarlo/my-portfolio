@@ -1,0 +1,32 @@
+div {
+	position: relative;
+	span.typed-text {
+		color: #d2b94b;
+	}
+
+	span.cursor {
+		position: absolute;
+		top: 5px;
+		margin-left: 1px;
+		width: 2px;
+		height: 25px;
+		background-color: #fff;
+		animation: cursorBlink 1s infinite;
+	}
+
+	span.cursor.typing {
+		animation: none;
+	}
+}
+
+@keyframes cursorBlink {
+	49% {
+		background-color: #fff;
+	}
+	50% {
+		background-color: #000;
+	}
+	99% {
+		background-color: #000;
+	}
+}
