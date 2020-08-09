@@ -36,8 +36,9 @@ export default {
 		return {
 			typingArray: [
 				"Husband & Father.",
+				"Web Developer.",
+				"Vuejs fan.",
 				"Sport lover.",
-				"Passionate about JS & Vuejs.",
 				"Book Reader.",
 			],
 		}
