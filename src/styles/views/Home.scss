@@ -20,10 +20,6 @@ main {
                 display: flex;
                 flex-direction: column;
 
-                .lg-heading {
-                    line-height: 1;
-                }
-
                 .social-icons {
                     margin-top: 1rem;
             
@@ -83,10 +79,6 @@ main {
                 img {
                     width: 150px;
                     height: 150px;
-                }
-
-                .lg-heading {
-                    font-size: 3rem;
                 }
             }
         }
