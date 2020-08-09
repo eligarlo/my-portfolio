@@ -1,0 +1,33 @@
+main {
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+
+    &.about {
+        overflow: hidden;
+
+        .hero {
+            margin-top: 20vh;
+            
+            .lg-heading {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+    main {
+        &.about {
+            .hero {
+                margin-top: 10vh;
+            }
+        }
+    }
+}
