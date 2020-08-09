@@ -27,6 +27,10 @@ main {
         &.about {
             .hero {
                 margin-top: 10vh;
+
+                p {
+                    text-align: center;
+                }
             }
         }
     }
