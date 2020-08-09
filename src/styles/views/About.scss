@@ -13,6 +13,12 @@ main {
                 margin-bottom: 2rem;
             }
 
+            .flex-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+
             p {
                 font-size: 1.4rem;
                 line-height: 1.2;
