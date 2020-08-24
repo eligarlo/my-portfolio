@@ -2,6 +2,10 @@
     transition: all 0.2s ease-in-out;
 }
 
+@mixin easeInOutLonger {
+    transition: all 1s ease-in-out;
+}
+
 @mixin easeOut {
     transition: all 0.5s ease-out;
 }
@@ -35,6 +39,34 @@
     } @else {
         @return #fff;
     }
+}
+
+// String replace to create svg
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+    
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    
+    @return $string;
+}
+
+// Trapezoid Svg for about hero
+@mixin trapezoidHeroSvg ($color) {
+    $polygons: '<polygon fill="#{$color}" points="0 0 100 0 100 50 0 100"/>';
+
+    $svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">#{$polygons}</svg>';
+
+    $svg: str-replace($svg, '#', '%23');
+    $svg: str-replace($svg, '<', '%3C');
+    $svg: str-replace($svg, '>', '%3E');
+
+    width: 100vw;
+    min-height: 30vh;
+    background-image: url('data:image/svg+xml,#{$svg}');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 // Media Query Mixins
