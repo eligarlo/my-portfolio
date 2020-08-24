@@ -16,6 +16,9 @@
 				<li class="nav-item" :class="{ 'show': showMenu }">
 					<router-link @click.native="showMenuState" class="nav-link" to="/about">About Me</router-link>
 				</li>
+				<li class="nav-item" :class="{ 'show': showMenu }">
+					<a class="nav-link" href="https://blog.eligarlo.dev/">Blog</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
