@@ -1,21 +1,79 @@
 main {
-    padding: 4rem;
     min-height: calc(100vh - 60px);
-
+    
     &.about {
         overflow: hidden;
-
+        
         .hero {
-            margin-top: 20vh;
-            
+            @include trapezoidHeroSvg(#096371);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px;
+
             .lg-heading {
-                text-align: center;
-                margin-bottom: 2rem;
+                margin-bottom: 5vh;
             }
 
             p {
-                font-size: 1.4rem;
-                line-height: 1.2;
+                margin: 0 0 10px 0;
+                text-align: center;
+            }
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 30px;
+
+            p {
+                font-size: 1.1rem;
+
+                .top-animation {
+                    position: relative;
+                    cursor: pointer;
+                    color: #22ADA5;
+                    
+                    &:hover {
+                        border-bottom: 1px solid #22ADA5;
+
+                        .top-animation-valencia {
+                            @include easeInOutLonger;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+
+                    .top-animation-valencia {
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        bottom: 20px;
+                        right: 0;
+
+                        img {
+                            max-width: 270px;
+                        }
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+
+                &.deloitte {
+                    color: #26890d;
+                }
+
+                &.zone-alarm {
+                    color: #E2447E;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -26,9 +84,15 @@ main {
     main {
         &.about {
             .hero {
-                margin-top: 10vh;
+                background: #096371;
+                padding: 70px 20px 30px;
+            }
 
+            .flex-container {
+                flex-direction: column;
                 p {
+                    max-width: 100%;
+                    font-size: 1rem;
                     text-align: center;
                 }
             }
