@@ -12,7 +12,7 @@ export default {
 	props: {
 		staticText: String,
 		typeArray: { type: Array, required: true },
-		typingSpeed: { type: Number, default: 100 },
+		typingSpeed: { type: Number, default: 50 },
 		erasingSpeed: { type: Number, default: 50 },
 		newTextDelay: { type: Number, default: 1500 },
 	},
