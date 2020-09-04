@@ -36,9 +36,10 @@ export default {
 		return {
 			typingArray: [
 				"Husband & Father.",
-				"Full Stack Web Developer.",
+				"Full Stack Developer.",
 				"Vuejs fan.",
-				"Sports lover & Book Reader.",
+				"Sports lover.",
+				"Book Reader.",
 			],
 		}
 	},
